@@ -55,7 +55,7 @@ class App < Sinatra::Base
 
   get '/logout' do
     #clear session hash here
-    del request.session['member_id']
+    session.clear(1)
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
 
