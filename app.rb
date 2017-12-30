@@ -20,8 +20,7 @@ class App < Sinatra::Base
 
   get '/set' do
     # set the :foo key of the session hash equal to 'hello' here!
-    @session == session
-    Item: <input type = "text" name="item" >
+    @session == session[:foo] == 'hello'
 
     if session[:foo] == 'hello'
 
